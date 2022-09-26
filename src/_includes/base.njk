@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="dsfr/dsfr.min.css">
+    <link rel="stylesheet" href="/dsfr/dsfr.min.css">
     <meta name="theme-color" content="#000091">
     <!-- Défini la couleur de thème du navigateur (Safari/Android) -->
-    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
     <!-- 180×180 -->
-    <link rel="icon" href="favicon/favicon.png" type="image/svg+xml">
-    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon/favicon.png" type="image/svg+xml">
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon">
     <!-- 32×32 -->
-    <link rel="manifest" href="favicon/manifest.webmanifest" crossorigin="use-credentials">
+    <link rel="manifest" href="/favicon/manifest.webmanifest" crossorigin="use-credentials">
     <!-- Modifier les chemins relatifs des favicons en fonction de la structure du projet -->
     <!-- Dans le fichier manifest.webmanifest aussi, modifier les chemins vers les images -->
     <title>{{ title }}</title>
@@ -19,20 +19,25 @@
   <body>
     <!-- code de la page -->
     <!-- Script en version es6 module et nomodule pour les navigateurs le ne supportant pas -->
-    <script type="module" src="dsfr/dsfr.module.min.js"></script>
-    <script type="text/javascript" nomodule="nomodule" src="dsfr/dsfr.nomodule.min.js"></script>
+    <script type="module" src="/dsfr/dsfr.module.min.js"></script>
+    <script type="text/javascript" nomodule="nomodule" src="/dsfr/dsfr.nomodule.min.js"></script>
 
     <h1>{{ title }}</h1>
 
-    {{ content | safe }}
+    <div>HEADER</div>
 
-    <div class="fr-alert fr-alert--info">
-      <h3 class="fr-alert__title">Information Test</h3>
-      <p>Cliquer sur la croix pour fermer l'alerte</p>
-      <button class="fr-btn--close fr-btn" title="Masquer le message" onclick="const alert = this.parentNode; alert.parentNode.removeChild(alert)">
-        Masquer le message
-      </button>
+    <div>
+      Menu :
+      <ul>
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/faq/">F.A.Q</a></li>
+      </ul>
     </div>
 
+    <div>
+    {{ content | safe }}
+    </div>
+
+    <div>FOOTER</div>
   </body>
 </html>
